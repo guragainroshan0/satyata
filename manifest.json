@@ -1,0 +1,42 @@
+{
+ 
+    "manifest_version" : 2,
+
+    "name":"Satyata",
+    "version":"1.0",
+
+    "description": "every Facebook post is not reliable",
+    "icons":{
+        //these are the icons shown in the chrome browser
+        //"128":"icon128.png",
+        //"48":"icon48.png",
+        //"16":"icon16.png"
+    },
+    "page_action":{
+
+        "default_popup":"popup.html",
+        "default_title":"Satyata"
+    },
+
+    "background":{
+        "scripts":["eventPage.js"],
+        "persistent":false
+    },
+    "content_scripts":[
+        {
+            
+            "matches":["https://www.facebook.com/*"],
+            "js":["jquery-3.3.1.min.js","content.js"],
+            "css":["content.css"]
+        }
+    ],
+  
+    "permissions":[
+        "storage",
+        "tabs",
+        "https://www.facebook.com/*",
+        "https://ingratiating-cosal.000webhostapp.com/*"
+    ]
+
+
+    }
