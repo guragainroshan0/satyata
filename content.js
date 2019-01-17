@@ -4,12 +4,21 @@ chrome.runtime.sendMessage({todo:"showPageAction"});
 //a.appendChild("<script src='jquery-3.3.1.min.js'></script>")
 
 $(document).on('click','.this-is-my-class',function(){
-    alert($(this).attr('id'));
+    console.log($(this).attr('id'));
     var title = $(this).attr('id');
-    chrome.storage.sync.set({'title':title},function(){});
-    chrome.storage.sync.get(['response'],function(resp){
-        alert(resp.response);
-    });
+    var xhr  = new XMLHttpRequest();
+    //var titles = object.title;
+    xhr.open("GET","http://localhost:8888/data?title="+title);
+    xhr.onload = function(){
+        var response = xhr.response;
+    }
+    xhr.send();
+    //var response = xhr.responseText;
+    //console.log("response="+response);
+     //chrome.storage.sync.set({'title':title},function(){});
+     //chrome.storage.sync.get(['response'],function(resp){
+     //   console.log("response="+resp.response);
+    // });
 });
 
 setInterval(function(){
@@ -41,10 +50,7 @@ for(var i=0;i<posts.length;i++){
 }
 
 },5000);
-$('.this-is-my-class').click(function(){
-    alert($(this).attr('id'));
 
-});
 
 
 function createROW(post,title){

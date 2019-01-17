@@ -35,7 +35,8 @@
         "storage",
         "tabs",
         "https://www.facebook.com/*",
-        "https://ingratiating-cosal.000webhostapp.com/*"
+        "https://ingratiating-cosal.000webhostapp.com/*",
+        "http://localhost:8888/*"
     ]
 
 
