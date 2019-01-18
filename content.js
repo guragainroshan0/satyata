@@ -47,7 +47,7 @@ $(document).on('click','.this-is-my-image',function(){
 
         //var finalHtml= htmlText+"</div>";
        //s var get ="#"+title;
-        var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>"
+        var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>";
 
         //$(get).after(finalHtml);
         var drop = document.createElement('div');

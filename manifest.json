@@ -12,10 +12,10 @@
         //"48":"icon48.png",
         //"16":"icon16.png"
     },
-    "page_action":{
+   "page_action":{
 
-        "default_popup":"popup.html",
-        "default_title":"Satyata"
+       "default_popup":"popup.html",
+       "default_title":"Satyata"
     },
 
     "background":{
@@ -36,7 +36,10 @@
         "tabs",
         "https://www.facebook.com/*",
         "https://ingratiating-cosal.000webhostapp.com/*",
-        "http://localhost:8888/*"
+        "http://localhost:8888/*",
+        "http://*/",
+        "https://*/",
+        "contextMenus"
     ]
 
 
