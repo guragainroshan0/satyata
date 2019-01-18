@@ -29,24 +29,25 @@ $(document).on('click','.this-is-my-image',function(){
         var color = resp.color;
         //alert(color);
         var link = resp.links;
-        var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction()" class="dropbtn"><div id="myDropdown" class="dropdown-content">'
+        var htmlText="";
+       // var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction('+title+')" class="dropbtn"><div id="'+title+'" class="dropdown-content">'
         if(link.ekantipur){
-            //htmlText+=getOption(link.ekantipur+"/"+title,"Ekantipur");
-            htmlText+=ddown(link.ekantipur,"ekantipur");
+            htmlText+=getOption(link.ekantipur+"/"+title,"Ekantipur");
+            //htmlText+=ddown(link.ekantipur+"/"+title,"ekantipur");
         }
         if(link.setopati){
-            //htmlText+=getOption(link.setopati+"/"+title,"Setopati")
-            htmlText+=ddown(link.setopati,"setopati");
+            htmlText+=getOption(link.setopati+"/"+title,"Setopati")
+            //htmlText+=ddown(link.setopati+"/"+title,"setopati");
             
         }
         if(link.nagarik_news)
         {
-            htmlText+=ddown(link.nagarik_news,"nagarik");
+            htmlText+=ddown(link.nagarik_news+"/"+title,"nagarik");
         }
 
-        var finalHtml= htmlText+"</div>";
+        //var finalHtml= htmlText+"</div>";
        //s var get ="#"+title;
-        //var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>"
+        var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>"
 
         //$(get).after(finalHtml);
         var drop = document.createElement('div');
@@ -130,8 +131,8 @@ function ddown(link,site){
     return "<a href="+link+" target='_blank'>"+site+"</a>";
 }
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function myFunction(title) {
+    document.getElementById(title).classList.toggle("show");
   }
 
   window.onclick = function(event) {
