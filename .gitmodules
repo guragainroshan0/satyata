@@ -1,0 +1,3 @@
+[submodule "ServerSide/np_lang"]
+	path = ServerSide/np_lang
+	url = https://github.com/Nepali-NLP-Group/np_lang

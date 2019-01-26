@@ -31,18 +31,23 @@ $(document).on('click','.this-is-my-image',function(){
         var link = resp.links;
         var htmlText="";
        // var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction('+title+')" class="dropbtn"><div id="'+title+'" class="dropdown-content">'
-        if(link.ekantipur){
-            htmlText+=getOption(link.ekantipur+"/"+title,"Ekantipur");
+        if(link.KantipurDaily){
+            htmlText+=getOption(link.KantipurDaily,"Ekantipur");
             //htmlText+=ddown(link.ekantipur+"/"+title,"ekantipur");
         }
-        if(link.setopati){
-            htmlText+=getOption(link.setopati+"/"+title,"Setopati")
+        if(link.AnnapurnaPost){
+            htmlText+=getOption(link.AnnapurnaPost,"Annapurna Post")
             //htmlText+=ddown(link.setopati+"/"+title,"setopati");
             
         }
-        if(link.nagarik_news)
+        if(link.NagarikDaily)
         {
-            htmlText+=ddown(link.nagarik_news+"/"+title,"nagarik");
+            htmlText+=getOption(link.NagarikDaily,"Nagarik");
+        }
+
+        if(link.OnlineKhabar)
+        {
+            htmlText+=getOption(link.OnlineKhabar,"Online Khabar");
         }
 
         //var finalHtml= htmlText+"</div>";
