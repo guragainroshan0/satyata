@@ -11,19 +11,19 @@ chrome.runtime.onMessage.addListener(function(request,sender,sendResponse){
 })
 
 
-chrome.storage.sync.get(['title'],function(object){
-    var xhr  = new XMLHttpRequest();
-    var title = object.title;
-    xhr.open("GET","http://localhost:8888/data?title="+title);
-    xhr.onload= function(){
-        chrome.storage.sync.set({'response':xhr.responseText},function(){});
-    }
-    xhr.send();
-    //var response = xhr.responseText;
-    //console.log("response="+response);
+// chrome.storage.sync.get(['title'],function(object){
+//     var xhr  = new XMLHttpRequest();
+//     var title = object.title;
+//     xhr.open("GET","http://localhost:8888/data?title="+title);
+//     xhr.onload= function(){
+//         chrome.storage.sync.set({'response':xhr.responseText},function(){});
+//     }
+//     xhr.send();
+//     //var response = xhr.responseText;
+//     //console.log("response="+response);
     
     
-});
+// });
 
 // var menuItem = {
 //     "id":"report_links",
@@ -49,19 +49,19 @@ chrome.storage.sync.get(['title'],function(object){
 // });
 
 
-chrome.tabs.query({active:true,currentWindow:true},function(tabs){
+// chrome.tabs.query({active:true,currentWindow:true},function(tabs){
 
-    var tab = tabs[0];
-    var link = tab.url;
+//     var tab = tabs[0];
+//     var link = tab.url;
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET","http://localhost:8888/valid?link="+link);
-    xhr.onload = function()
-    {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("GET","http://localhost:8888/valid?link="+link);
+//     xhr.onload = function()
+//     {
         
-    }
-    xhr.send();
+//     }
+//     xhr.send();
    
 
     
-});
+// });
