@@ -79,23 +79,32 @@ $(document).on('click','.this-is-my-image',function(){
         //alert(color);
         var link = resp.links;
         var htmlText="";
-       /*
-            getOption function returns the code for the drop down menu
-       
-       */
-        if(link.ekantipur){
-            
-            //htmlText+=add("yo mann the mero neplai ho",link.ekantipur);
-            htmlText+=getOption(link.ekantipur+"/"+title,"aja nepal ma k  k  ksa dkas daskd kas dkas dkas dkas dkas d");
+
+      
+      /*
+      If statements for the news in json if news in json then add the news in drop down list
+      */
+       // var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction('+title+')" class="dropbtn"><div id="'+title+'" class="dropdown-content">'
+        if(link.KantipurDaily){
+            htmlText+=getOption(link.KantipurDaily,"Ekantipur");
+            //htmlText+=ddown(link.ekantipur+"/"+title,"ekantipur");
+        }
+        if(link.AnnapurnaPost){
+            htmlText+=getOption(link.AnnapurnaPost,"Annapurna Post")
+            //htmlText+=ddown(link.setopati+"/"+title,"setopati");
             
         }
-        if(link.setopati){
-           // htmlText+=add("yo mann the mero neplai ho",link.setopati);
-            htmlText+=getOption(link.setopati+"/"+title,"Setopati")
-            
-            
+        if(link.NagarikDaily)
+        {
+            htmlText+=getOption(link.NagarikDaily,"Nagarik");
         }
-     
+
+        if(link.OnlineKhabar)
+        {
+            htmlText+=getOption(link.OnlineKhabar,"Online Khabar");
+        }
+
+          
 
         /*
             <select> tag returns the drop down menu and html text containst the options
