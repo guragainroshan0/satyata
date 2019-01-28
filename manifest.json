@@ -13,7 +13,7 @@
         "16":"icon16.png"
     },
    "page_action":{
-
+       "default_icon":"icon48.png",
        "default_popup":"popup.html",
        "default_title":"Satyata"
     },
