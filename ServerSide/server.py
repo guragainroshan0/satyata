@@ -11,7 +11,7 @@ def inference():
             "color" : "#ff011",
             "links" : dict(news_cluster)
     }
-    print(response)
+    
     return jsonify(response)
 
 if __name__ == "__main__":

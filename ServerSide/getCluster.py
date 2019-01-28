@@ -13,7 +13,7 @@ def get_cluster(samachar):
     processed_samachar = preprocesstext(samachar)
     newsindex = index[processed_samachar]
     for offset, simmilarity in newsindex:
-        yield (all_domain[offset], all_url[offset])
+        yield all_domain[offset], [all_url[offset], all_title[offset]]
 
 
 NEPALI_SW = stopwords.words("nepali")

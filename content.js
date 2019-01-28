@@ -85,23 +85,10 @@ $(document).on('click','.this-is-my-image',function(){
       If statements for the news in json if news in json then add the news in drop down list
       */
        // var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction('+title+')" class="dropbtn"><div id="'+title+'" class="dropdown-content">'
-        if(link.KantipurDaily){
-            htmlText+=getOption(link.KantipurDaily,"Ekantipur");
-            //htmlText+=ddown(link.ekantipur+"/"+title,"ekantipur");
-        }
-        if(link.AnnapurnaPost){
-            htmlText+=getOption(link.AnnapurnaPost,"Annapurna Post")
-            //htmlText+=ddown(link.setopati+"/"+title,"setopati");
-            
-        }
-        if(link.NagarikDaily)
-        {
-            htmlText+=getOption(link.NagarikDaily,"Nagarik");
-        }
-
-        if(link.OnlineKhabar)
-        {
-            htmlText+=getOption(link.OnlineKhabar,"Online Khabar");
+       for(var i=0; i=link.length;i++){
+           var arr = Array(link[i]) 
+           htmlText+=getOption(arr[0],arr[1]);
+        //htmlText+=ddown(link.ekantipur+"/"+title,"ekantipur");
         }
 
           
@@ -201,8 +188,6 @@ setInterval(function(){
 },5000);
 
 
-var d = chrome.runtime.getURL("icon.png");
-console.log(d);
 /*
 function to add the image in the post 
 the argument post is the post instance and title is the title of the post
@@ -245,7 +230,7 @@ function createROW(post,title){
             id = title here title is the title of the facebook post. The id of title is given so that the title can be retriived easily in click listener where Ajax request is sent 
        */
         item.innerHTML=
-        '<img src= '+d+' class="this-is-my-image" id="'+title+'" height="25px" width="25px" style="float:right;display:inline;margin-right:25px">';
+        '<img src="https://assets-cdn.ekantipur.com/images/kantipur-radio/politics/download-26122018082624-600x0.jpg" class="this-is-my-image" id="'+title+'" height="25px" width="25px" style="float:right;display:inline;margin-right:25px">';
         
         /*
             Now the code of the image is added
