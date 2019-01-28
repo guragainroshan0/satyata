@@ -14,7 +14,7 @@ def scrape():
                 data = title.find("a")
                 with open("kantipur_daily.txt",'a') as csv_file:
                         csv_write = csv.writer(csv_file,delimiter=',')
-                        csv_write.writerow([data.text,data["href"],'www.kantipurdaily.com'])
+                        csv_write.writerow([data.text,data["href"],'KantipurDaily'])
                         print(data["href"])
                         print(data.text)
     

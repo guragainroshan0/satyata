@@ -18,7 +18,7 @@ def scrape():
             source = link.split('/')[2]
             with open('online_khabar.txt','a') as csv_file:
                csv_writer = csv.writer(csv_file,delimiter=',')
-               csv_writer.writerow([title,link,source])
+               csv_writer.writerow([title,link,"OnlineKhabar"])
         print(page_number)
 
 if __name__=="__main__":

@@ -26,7 +26,7 @@ def scrape():
                     link = "https://nagariknews.nagariknetwork.com" +data.find('a')['href']
                     print(title+'\n'+link)
                     csv_writer = csv.writer(csv_file,delimiter=',')
-                    csv_writer.writerow([title,link,"https://nagariknews.nagariknetwork.com"])
+                    csv_writer.writerow([title,link,"NagarikDaily"])
 
 
 if __name__=="__main__":

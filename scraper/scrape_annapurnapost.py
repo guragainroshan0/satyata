@@ -16,7 +16,7 @@ def scrape():
                 print(link)
                 with open("annapurna_post.txt",'a') as csv_file:
                         csv_file = csv.writer(csv_file,delimiter=',')
-                        csv_file.writerow([title,link,url])
+                        csv_file.writerow([title,link,"AnnapurnaPost"])
         #for post in data:
 
 if __name__=="__main__":
