@@ -201,6 +201,8 @@ setInterval(function(){
 },5000);
 
 
+var d = chrome.runtime.getURL("icon.png");
+console.log(d);
 /*
 function to add the image in the post 
 the argument post is the post instance and title is the title of the post
@@ -243,7 +245,7 @@ function createROW(post,title){
             id = title here title is the title of the facebook post. The id of title is given so that the title can be retriived easily in click listener where Ajax request is sent 
        */
         item.innerHTML=
-        '<img src="https://assets-cdn.ekantipur.com/images/kantipur-radio/politics/download-26122018082624-600x0.jpg" class="this-is-my-image" id="'+title+'" height="25px" width="25px" style="float:right;display:inline;margin-right:25px">';
+        '<img src= '+d+' class="this-is-my-image" id="'+title+'" height="25px" width="25px" style="float:right;display:inline;margin-right:25px">';
         
         /*
             Now the code of the image is added
