@@ -85,30 +85,12 @@ $(document).on('click','.this-is-my-image',function(){
       If statements for the news in json if news in json then add the news in drop down list
       */
        // var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction('+title+')" class="dropbtn"><div id="'+title+'" class="dropdown-content">'
-       if(link.KantipurDaily){
-         var a = link.KantipurDaily;
-         htmlText+=getOption(a[0],a[1]);
+       for(var i=0; i<link.length; i++){
+         var a = link[i];
+         htmlText+=getOption(a[1],a[0]+":- "+a[2]);
         //htmlText+=ddown(link.ekantipur+"/"+title,"ekantipur");
     }
-    if(link.AnnapurnaPost){
-        var a = link.AnnapurnaPost;
-        htmlText+=getOption(a[0],a[1]);
-        //htmlText+=ddown(link.setopati+"/"+title,"setopati");
-        
-    }
-    if(link.NagarikDaily)
-    {
-        var a = link.NagarikDaily;
-        htmlText+=getOption(a[0],a[1]);
-    }
-
-    if(link.OnlineKhabar)
-    {
-        var a = link.OnlineKhabar;
-        htmlText+=getOption(a[0],a[1]);
-    }
-
-          
+     
 
         /*
             <select> tag returns the drop down menu and html text containst the options
