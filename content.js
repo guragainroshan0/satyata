@@ -6,7 +6,8 @@ chrome.runtime.sendMessage({todo:"showPageAction"});
 //a = document.getElementsByTagName('head');
 //a.appendChild("<script src='jquery-3.3.1.min.js'></script>")
 
-
+var d = chrome.runtime.getURL("icon.png");
+var d2 = chrome.runtime.getURL("icon2.png");
 
 $(document).on('click','.this-is-my-dropdown',function(){
 
@@ -60,7 +61,7 @@ $(document).on('click','.this-is-my-image',function(){
             This is used to hide the image after it has been clicked
             div is the instance of the image
        */
-       div.hide()
+       //div.hide()
 
         /*
             the json is parsed
@@ -83,6 +84,8 @@ $(document).on('click','.this-is-my-image',function(){
       If statements for the news in json if news in json then add the news in drop down list
       */
        // var htmlText = '<img src="https://www.freeiconspng.com/uploads/blue-button-icon-png-20.png" height="25px" width="25px" style="float:right;display:inline;margin-right:25px" onclick="myFunction('+title+')" class="dropbtn"><div id="'+title+'" class="dropdown-content">'
+       
+       
        for(var i=0; i<link.length; i++){
          var a = link[i];
          htmlText+=getOption(a[1],a[0]+":- "+a[2]);
@@ -93,8 +96,17 @@ $(document).on('click','.this-is-my-image',function(){
         /*
             <select> tag returns the drop down menu and html text containst the options
         */
-        var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>";
+       if(link.length==0)
+       {
 
+        div.attr('src',"https://img.icons8.com/dusk/64/000000/pi.png");
+        
+       }
+       else{
+       
+        div.attr('src',"https://i.imgur.com/eFy7r3z.png");
+        var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>";
+       
        // var finalHtml = '<div class="dropdown"><div class="dropdown-content">'+htmlText+'</div></div>'
 
         /*
@@ -114,7 +126,7 @@ $(document).on('click','.this-is-my-image',function(){
         */
         post.parentNode.appendChild(drop);
         //alert(title);
-
+       }
     }
 
     /*
@@ -184,7 +196,7 @@ setInterval(function(){
 
 },5000);
 
-var d = chrome.runtime.getURL("icon.png");
+
 /*
 function to add the image in the post 
 the argument post is the post instance and title is the title of the post

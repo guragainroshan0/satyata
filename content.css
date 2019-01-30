@@ -1,7 +1,7 @@
 
 
 .this-is-my-dropdown{
-    width: 73px;
+    width: 150px;
     font-size: 12px;
     height: 25px;
     padding: 5px;
@@ -10,7 +10,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(https://img.icons8.com/dusk/64/000000/pi.png) 96% / 15% no-repeat #eee;      
+    background: url(https://i.imgur.com/YGxWkVT.png) 96% / 15% no-repeat #eee;      
 }
 .dropdown {
     position: relative;
