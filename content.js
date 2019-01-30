@@ -101,7 +101,7 @@ $(document).on('click','.this-is-my-image',function(){
        if(link.length==0)
        {
 
-        div.attr('src',"https://img.icons8.com/dusk/64/000000/pi.png");
+        div.attr('src',"https://i.imgur.com/yDci0EK.png");
         
        }
        else{
