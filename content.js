@@ -1,4 +1,3 @@
-
 /*
 This is chrome api that shows the icon in the screen
 */
@@ -48,7 +47,6 @@ $(document).on('click','.this-is-my-image',function(){
 
     /*
     Ajax sends asynchronous request so in load the function gets executed
-
     */
     xhr.onload = function(){
         /*
@@ -190,15 +188,12 @@ var d = chrome.runtime.getURL("icon.png");
 /*
 function to add the image in the post 
 the argument post is the post instance and title is the title of the post
-
 */
 function createROW(post,title){
     
     /*
-
     This is the parent node of the added image div the image div is in code below
     datas[0] is the data div element created 
-
     */
     var datas = post.getElementsByClassName('_6a uiPopover _5pbi _cmw _b1e _1wbl');
 
@@ -256,7 +251,6 @@ function add(title,link){
 
 function dropDown(){
     
-  
   
   
   
