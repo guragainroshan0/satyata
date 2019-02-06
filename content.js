@@ -105,7 +105,7 @@ $(document).on('click','.this-is-my-image',function(){
         
        }
        else{
-       
+        
         div.attr('src',"https://i.imgur.com/eFy7r3z.png");
         var finalHtml = "<select class='this-is-my-dropdown'>"+htmlText+"</select>";
        
